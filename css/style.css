@@ -1,0 +1,58 @@
+#enemy0 { background: url(../images/cards.png) no-repeat top left; }
+#enemy1 { background: url(../images/cards.png) no-repeat top left; }
+#enemy2 { background: url(../images/cards.png) no-repeat top left; }
+#enemy3 { background: url(../images/cards.png) no-repeat top left; }
+#enemy4 { background: url(../images/cards.png) no-repeat top left; }
+
+.sprite-cards_c01{ background-position: 0 0; width: 32px; height: 64px; } 
+.sprite-cards_c02{ background-position: 0 -128px; width: 32px; height: 64px; } 
+.sprite-cards_c03{ background-position: 0 -256px; width: 32px; height: 64px; } 
+.sprite-cards_c04{ background-position: 0 -384px; width: 32px; height: 64px; } 
+.sprite-cards_c05{ background-position: 0 -512px; width: 32px; height: 64px; } 
+.sprite-cards_c06{ background-position: 0 -640px; width: 32px; height: 64px; } 
+.sprite-cards_c07{ background-position: 0 -768px; width: 32px; height: 64px; } 
+.sprite-cards_c08{ background-position: 0 -896px; width: 32px; height: 64px; } 
+.sprite-cards_c09{ background-position: 0 -1024px; width: 32px; height: 64px; } 
+.sprite-cards_c10{ background-position: 0 -1152px; width: 32px; height: 64px; } 
+.sprite-cards_c11{ background-position: 0 -1280px; width: 32px; height: 64px; } 
+.sprite-cards_c12{ background-position: 0 -1408px; width: 32px; height: 64px; } 
+.sprite-cards_c13{ background-position: 0 -1536px; width: 32px; height: 64px; } 
+.sprite-cards_d14{ background-position: 0 -1664px; width: 32px; height: 64px; } 
+.sprite-cards_d15{ background-position: 0 -1792px; width: 32px; height: 64px; } 
+.sprite-cards_d16{ background-position: 0 -1920px; width: 32px; height: 64px; } 
+.sprite-cards_d17{ background-position: -64px 0; width: 32px; height: 64px; } 
+.sprite-cards_d18{ background-position: -64px -128px; width: 32px; height: 64px; } 
+.sprite-cards_d19{ background-position: -64px -256px; width: 32px; height: 64px; } 
+.sprite-cards_d20{ background-position: -64px -384px; width: 32px; height: 64px; } 
+.sprite-cards_d21{ background-position: -64px -512px; width: 32px; height: 64px; } 
+.sprite-cards_d22{ background-position: -64px -640px; width: 32px; height: 64px; } 
+.sprite-cards_d23{ background-position: -64px -768px; width: 32px; height: 64px; } 
+.sprite-cards_d24{ background-position: -64px -896px; width: 32px; height: 64px; } 
+.sprite-cards_d25{ background-position: -64px -1024px; width: 32px; height: 64px; } 
+.sprite-cards_d26{ background-position: -64px -1152px; width: 32px; height: 64px; } 
+.sprite-cards_h15{ background-position: -64px -1280px; width: 32px; height: 64px; } 
+.sprite-cards_h16{ background-position: -64px -1408px; width: 32px; height: 64px; } 
+.sprite-cards_h17{ background-position: -64px -1536px; width: 32px; height: 64px; } 
+.sprite-cards_h18{ background-position: -64px -1664px; width: 32px; height: 64px; } 
+.sprite-cards_h19{ background-position: -64px -1792px; width: 32px; height: 64px; } 
+.sprite-cards_h20{ background-position: -64px -1920px; width: 32px; height: 64px; } 
+.sprite-cards_h21{ background-position: -128px 0; width: 32px; height: 64px; } 
+.sprite-cards_h22{ background-position: -128px -128px; width: 32px; height: 64px; } 
+.sprite-cards_h23{ background-position: -128px -256px; width: 32px; height: 64px; } 
+.sprite-cards_h24{ background-position: -128px -384px; width: 32px; height: 64px; } 
+.sprite-cards_h25{ background-position: -128px -512px; width: 32px; height: 64px; } 
+.sprite-cards_h26{ background-position: -128px -640px; width: 32px; height: 64px; } 
+.sprite-cards_h27{ background-position: -128px -768px; width: 32px; height: 64px; } 
+.sprite-cards_s01{ background-position: -128px -896px; width: 32px; height: 64px; } 
+.sprite-cards_s02{ background-position: -128px -1024px; width: 32px; height: 64px; } 
+.sprite-cards_s03{ background-position: -128px -1152px; width: 32px; height: 64px; } 
+.sprite-cards_s04{ background-position: -128px -1280px; width: 32px; height: 64px; } 
+.sprite-cards_s05{ background-position: -128px -1408px; width: 32px; height: 64px; } 
+.sprite-cards_s06{ background-position: -128px -1536px; width: 32px; height: 64px; } 
+.sprite-cards_s07{ background-position: -128px -1664px; width: 32px; height: 64px; } 
+.sprite-cards_s08{ background-position: -128px -1792px; width: 32px; height: 64px; } 
+.sprite-cards_s09{ background-position: -128px -1920px; width: 32px; height: 64px; } 
+.sprite-cards_s10{ background-position: -192px 0; width: 32px; height: 64px; } 
+.sprite-cards_s11{ background-position: -192px -128px; width: 32px; height: 64px; } 
+.sprite-cards_s12{ background-position: -192px -256px; width: 32px; height: 64px; } 
+.sprite-cards_s13{ background-position: -192px -384px; width: 32px; height: 64px; } 

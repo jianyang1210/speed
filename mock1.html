@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+		<script type="text/javascript" src="js/observer.js"></script>
+		<script type="text/javascript" src="js/utils.js" ></script>
+		<script type="text/javascript" src="js/player.js" ></script>
+		<script type="text/javascript" src="js/playTable.js" ></script>
+		<script type="text/javascript" src="js/gameMaster.js" ></script>
+		<script type="text/javascript" src="js/main.js" ></script>
+		<style type="text/css">
+            body {
+                margin: 0;
+            }
+			ul.cards {
+				list-style:none;
+			}
+			li.card {
+				float:left;
+				margin-right: 20px;
+			}
+
+			.playTable {
+				width:320px;
+				height:320px;
+				border:	1px outset black;
+				background-color: green;
+			}
+			.cardPlace0 {
+				width: 32px;
+				height: 64px;
+				border:	1px outset black;
+				margin: 120px 0px 50px 100px;
+				position: absolute;
+			}
+			.cardPlace1 {
+				width: 32px;
+				height: 64px;
+				border:	1px outset black;
+				margin: 120px 0px 50px 160px;
+				position: absolute;
+			}
+			.emenyCard {
+				margin: 250px 0px 10px 0px;
+			}
+			.userCard{
+				margin: 10px 0px 10px 0px;
+			}
+			.clear { clear:both; }  
+
+		</style>
+	</head>
+	<body>
+		<div id="playTable" class="playTable">
+			<ul id="userCards" class="cards userCard">
+				<li class="card"><img id="user0" src="images/cards/cards_c01.png"></li>
+				<li class="card"><img id="user1" src="images/cards/cards_c02.png"></li>
+				<li class="card"><img id="user2" src="images/cards/cards_c03.png"></li>
+				<li class="card"><img id="user3" src="images/cards/cards_c04.png"></li>
+				<li class="card"><img id="user4" src="images/cards/cards_c05.png"></li>
+			</ul>
+			<div id="cardPlace0" class="cardPlace0"></div>
+			<div id="cardPlace1" class="cardPlace1"></div>
+			<ul id="enemyCards" class="cards emenyCard">
+				<li class="card"><img id="enemy0" src="images/cards/cards_c01.png"></li>
+				<li class="card"><img id="enemy1" src="images/cards/cards_c02.png"></li>
+				<li class="card"><img id="enemy2" src="images/cards/cards_c03.png"></li>
+				<li class="card"><img id="enemy3" src="images/cards/cards_c04.png"></li>
+				<li class="card"><img id="enemy4" src="images/cards/cards_c05.png"></li>
+			</ul>
+		</div>
+		<input type="button" id="gameStart" value="gameStart">
+	</body>	
+</html>
