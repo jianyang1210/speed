@@ -8,7 +8,7 @@ var Card = enchant.Class.create(enchant.Sprite, {
 	initialize: function(id, cardCategory, cardNum, x, y){
 		enchant.Sprite.call(this, 32, 64);
 		this.image = game.assets['images/cards.png'];
-		this.frame = 13*cardCategory + (cardNum);
+		this.frame = 15*cardCategory + (cardNum);
 		this.id = id;
 		this.x = x;
 		this.y = y;
@@ -32,19 +32,18 @@ var Card = enchant.Class.create(enchant.Sprite, {
 
 		// 移動終了イベント
 		this.addEventListener(enchant.Event.TOUCH_END, function(e){
-			this.fire('remove', this.id);
-			console.log('touch end');
+			// 山における条件を満たしていなければ、もとに戻す
 			this.moveUndo();
 		});
-	},
-	moveUndo: function(){
-		this.x = this._originX;
-		this.y = this._originY;
-	},
-	getCardNum: function(){
-		return this._cardNum;
-	},
-	getCardCategory: function(){
-		return this._cardCategory;
 	}
 });
+Card.prototype.moveUndo = function(){
+	this.x = this._originX;
+	this.y = this._originY;
+};
+Card.prototype.getCardNum = function(){
+	return this._cardNum;
+};
+Card.prototype.getCardCategory = function(){
+	return this._cardCategory;
+};
