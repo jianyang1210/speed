@@ -7,7 +7,7 @@ var playTable = {
 	initialize: function(player){
 		this.player.push(player);
 	},
-	start: function(){
+	start: function(game){
 		this.fire('distributeCard', this);
 	},
 	// カード受け取る

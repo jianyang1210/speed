@@ -16,7 +16,7 @@ window.onload = function(){
 				id: this.id,
 				data: e.target.src.split('/').pop().split('.')[0]
 			};
-			e.dataTransfer.effectAllowed = 'copyMove';
+			e.dataTransfer.effectAllowed = 'move';
 			e.dataTransfer.setData('text/plain', JSON.stringify(data));
 		};
 	}
@@ -30,20 +30,28 @@ window.onload = function(){
 };
 
 function handleDragEnterEvent(dragId){
-		$(dragId).ondragover = function(event){
-		var i,len =event.dataTransfer.types.length;
+	$(dragId).ondragenter = function(e){
+		var i,len = e.dataTransfer.types.length;
 		for(i=0; i < len ; i++){
-			if(event.dataTransfer.types[i] === 'text/plain'){
-				event.preventDefault();
-				event.dataTransfer.dropEffect = 'move';
+			if(e.dataTransfer.types[i] === 'text/plain'){
+				e.dataTransfer.dropEffect = 'move';
+				break;
+			}
+		}
+
+	};
+	$(dragId).ondragover = function(e){
+		var i,len = e.dataTransfer.types.length;
+		for(i=0; i < len ; i++){
+			if(e.dataTransfer.types[i] === 'text/plain'){
+				e.preventDefault();
 				break;
 			}
 		}
 	};
-	$(dragId).ondrop= function(event){
+	$(dragId).ondrop= function(e){
 		var idx,card;
-		event.preventDefault();
-		card = event.dataTransfer.getData('text/plain');
+		card = e.dataTransfer.getData('text/plain');
 		if(card != ''){
 			console.log(JSON.parse(card));
 		}else{
