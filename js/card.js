@@ -1,15 +1,17 @@
 var Card = enchant.Class.create(enchant.Sprite, {
+	userId:0,
 	_originX:0,
 	_originY:0,
 	_moveX:0,
 	_moveY:0,
 	_cardNum:0,
 	_cardCategory:0,
-	initialize: function(id, cardCategory, cardNum, x, y){
+	initialize: function(userId, id, cardCategory, cardNum, x, y){
 		enchant.Sprite.call(this, 32, 64);
 		this.image = game.assets['images/cards.png'];
 		this.frame = 15*cardCategory + (cardNum);
 		this.id = id;
+		this.userId = userId;
 		this.x = x;
 		this.y = y;
 		this._originX = x;
@@ -26,14 +28,17 @@ var Card = enchant.Class.create(enchant.Sprite, {
 		// 移動中のイベント
 		this.addEventListener(enchant.Event.TOUCH_MOVE, function(e){
 			console.log('touch move');
-			this.x = e.x - _moveX;
-			this.y = e.y - _moveY;
+			this.moveTo(e.x - _moveX, e.y - _moveY);
 		});
 
 		// 移動終了イベント
 		this.addEventListener(enchant.Event.TOUCH_END, function(e){
-			// 山における条件を満たしていなければ、もとに戻す
-			this.moveUndo();
+			this.x = this._offsetX;
+			this.y = this._offsetY;
+			console.log('end this.x = '+this.x + ', this.y = ' + this.y);
+
+			// 手札を出す
+			this.fire('putCard', this);
 		});
 	}
 });

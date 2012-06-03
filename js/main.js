@@ -1,7 +1,16 @@
-enchant();
 var game , sprite , startScene , gameScene, playerCardSlot,emenyCardSlot ;
+
+(function() {
+	enchant();
+	makePublisher(Card.prototype);
+	makePublisher(playTable);
+	playTable.on('popSlot', 'removeCard', gameMaster);
+	Card.prototype.on('putCard', 'putCard', playTable);
+})();
+
 window.onload = function(){
 	game = new Game(320, 320);
+	game.fps = 24;
 
 	game.preload('images/cards.png', 'images/start.png', 'images/end.png');
 	game.rootScene.backgroundColor = 'darkGreen';
@@ -10,16 +19,16 @@ window.onload = function(){
 		sprite.image = game.assets['images/start.png'];
 		sprite.addEventListener(enchant.Event.TOUCH_START, function(e){
 			console.log('touch event');
-			playerCardSlot = new CardSlot(1, 50, 10);
-			emenyCardSlot = new CardSlot(2, 50, 200);
-			for(var i = 0; i < 4 ; i++){
-				playerCardSlot.pushCard(new Card(1, 1, 0, i*50, 0));
-				emenyCardSlot.pushCard(new Card(1, 1, 0, i*50, 0));
-			}
-
+			playTable.initialize();
+			gameMaster.initialize(1, 2);
 			gameScene = new Scene();
-			gameScene.addChild(playerCardSlot);
-			gameScene.addChild(emenyCardSlot);
+
+			var luggageCards = playTable.getLuggageCards();
+			for(var i = 0, len = luggageCards.length; i < len; i++){
+				gameScene.addChild(luggageCards[i]);
+			}
+			gameScene.addChild(gameMaster.getPlayerCardSlot());
+			gameScene.addChild(gameMaster.getEmenyCardSlot());
 			game.removeScene(startScene);
 			game.replaceScene(gameScene);
 		});
@@ -31,3 +40,4 @@ window.onload = function(){
 	};
 	game.debug();
 };
+
